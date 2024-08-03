@@ -20,5 +20,5 @@ import Django_test.views as dt
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', dt.index)
+    path('index/', dt.index)
 ]
