@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>My Django Test</title>
-</head>
-<body>
+<!--index.html-->
+{% extends 'base.html' %}
+
+{% block title %}My Django Test{% endblock %}
+
+{% block headmessage %}
     <h1>Welcome to my Django Test</h1>
-    <hr>
+{% endblock %}
+
+{% block content %}
     {% for post in posts %}
         <p style='font-family:微軟正黑體;font-size:16pt;font-weight:bold'>
             <a href='/post/{{post.subtitle}}'>
@@ -17,7 +18,4 @@
             {{ post.body }}
         </p> {% endcomment %}
     {% endfor %}
-    <hr>
-    <h3>現在時刻:{{  now  }}</h3>
-</body>
-</html>
+{% endblock %}
