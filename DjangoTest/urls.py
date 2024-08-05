@@ -20,5 +20,6 @@ import Django_test.views as dt
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', dt.index)
+    path('', dt.index),
+    path('post/<str:subtitle>/', dt.showpost),
 ]
